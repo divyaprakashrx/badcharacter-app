@@ -1,5 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-# Bad Characters 
+
+# Bad Characters
+
 A web app to list and display bad characters and apply search and filters
 
 ## 🧐 What's inside?

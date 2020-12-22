@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Bad Characters',
-    description: 'A web app to list and show details of bad characters',
+    title: "Bad Characters",
+    description: "A web app to list and show details of bad characters",
     author: `divyaprakash`,
   },
   plugins: [

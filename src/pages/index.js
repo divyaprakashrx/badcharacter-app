@@ -3,16 +3,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Sheet from "../components/sheet"
 
-function IndexPage () {
-
-
+function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <Sheet/>
+      <Sheet />
     </Layout>
   )
 }
-
 
 export default IndexPage

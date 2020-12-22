@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
-
   return (
     <>
       <div className="header">
