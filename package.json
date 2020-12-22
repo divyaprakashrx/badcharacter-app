@@ -1,6 +1,6 @@
 {
   "name": "bad-characters",
-  "private": true,
+  "private": false,
   "description": "A web app to liat and show bad characters",
   "version": "0.1.0",
   "author": "Divya Prakash <medivyaprakash@gmail.com>",

@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
+      <div className="footer">&copy; Divya Prakash</div>
     </>
   )
 }
