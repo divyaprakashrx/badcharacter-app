@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url(../assets/Quicksand.ttf);
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url(../assets/SourceSansPro.ttf);
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100vw;
+  font-family: "Quicksand", "SourceSansPro";
+  color: #212121;
+  background-color: #3F51B5;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #303f9f;
+  font-family: "Quicksand";
+  .head {
+    text-decoration: none;
+    color:#ffffff;
+  }
+}

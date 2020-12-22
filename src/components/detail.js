@@ -16,7 +16,6 @@ function Details(props) {
     <>
       <div className="detailpage row">
 
-        <div className="detail-img-row">
           <div className="detail-details-row">
             <h1>{data.character.name}</h1>
             <div className="detail-img-wrap">
@@ -26,33 +25,32 @@ function Details(props) {
                 className="detailpic"
               />
             </div>
-            <div className="det-card" data-aos="fade-up">
+            <div className="det-card">
               <h3>Status</h3>
               <p>{data.character.status}</p>
-            </div>{" "}
-            <div className="det-card" data-aos="fade-up">
+            </div>
+            <div className="det-card">
               <h3>Date of Birth</h3>
               <p>{data.character.birthday}</p>
             </div>
-            <div className="det-card" data-aos="fade-up">
+            <div className="det-card">
               <h3>Nickname</h3>
               <p>{data.character.nickname}</p>
             </div>
-            <div className="det-card" data-aos="fade-up">
+            <div className="det-card">
               <h3>Appearance</h3>
               <p>{data.character.appearance}</p>
             </div>
-            <div className="det-card" data-aos="fade-up">
+            <div className="det-card">
               <h3>Portrayed by</h3>
               <p>{data.character.portrayed}</p>
             </div>
-            <div className="det-card" data-aos="fade-up">
+            <div className="det-card">
               <h3>Category</h3>
               <p>{data.character.category}</p>
             </div>
           </div>
         </div>
-      </div>
     </>
   )
 }

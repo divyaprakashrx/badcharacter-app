@@ -1,9 +1,23 @@
 .sheet{
+    
     max-width: 1000px;
     .filter-row{
         display: flex;
         justify-content: space-around;
         margin-top: 3vh;
         margin-bottom: 3vh;
+        div{
+            display: flex;
+            align-items: end;
+        }
     }
+}
+#table-head{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 1rem;
+}
+#table-detail{
+    font-family: 'SourceSansPro';
+    font-size: 1rem;
 }

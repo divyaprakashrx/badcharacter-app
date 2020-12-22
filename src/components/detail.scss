@@ -1,23 +1,18 @@
 
 .detailpage {
-  font-family: "Source Sans Pro";
   width: 100%;
-  margin-top: 10vw;
+  margin-top: 3vw;
   display: flex;
   justify-content: space-evenly;
-  .detail-img-row {
-      margin-top: 5vh;
+  .detail-details-row {
+    width: 50vw;
+    display: flex;
     justify-content: center;
-    text-align: center;
-    .detmail {
-      position: absolute;
-      margin-top: -70px;
-      margin-left: 60px;
+    align-items: center;
+    flex-direction: column;
+    h1{
+      color: #ffffff;
     }
-    h3 {
-      color: #4e4e4e;
-    }
-    font-family: "Source Sans Pro";
     .detail-img-wrap {
       overflow: hidden;
       width: 250px;
@@ -31,13 +26,6 @@
         align-self: center;
       }
     }
-  }
-  .detail-details-row {
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     #dir{
       line-height: 1.5;
       letter-spacing: 1px;
@@ -53,25 +41,14 @@
       border-radius: 5px;
       padding-left: 5%;
       padding-bottom: 15px;
-      font-family: "Source Sans Pro";
+      font-family: "SourceSansPro";
+      text-align: center;
       list-style: disc;
       h3 {
         color: #2f2f2f;
       }
-      .dettable {
-        overflow: hidden;
-        max-width: 90%;
-        overflow-x: scroll;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .dettable:-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-      }
-      table {
-        min-width: 90%;
-        width: 90%;
+      p{
+        font-size: 1rem;
       }
     }
   }

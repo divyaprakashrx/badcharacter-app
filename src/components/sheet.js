@@ -8,6 +8,8 @@ import TableHead from "@material-ui/core/TableHead"
 import TablePagination from "@material-ui/core/TablePagination"
 import TableRow from "@material-ui/core/TableRow"
 import TextField from "@material-ui/core/TextField"
+import FilterListIcon from "@material-ui/icons/FilterList"
+import SearchIcon from "@material-ui/icons/Search"
 import { Link } from "gatsby"
 import axios from "axios"
 import "./sheet.scss"
@@ -32,7 +34,9 @@ export default function Sheet() {
   const [name, setName] = useState("")
   useEffect(() => {
     axios
-      .get(`https://www.breakingbadapi.com/api/characters?category=${category}&name=${name}`)
+      .get(
+        `https://www.breakingbadapi.com/api/characters?category=${category}&name=${name}`
+      )
       .then(res => setData({ characters: res.data }))
   })
   const handleChangePage = (event, newPage) => {
@@ -53,20 +57,26 @@ export default function Sheet() {
   return (
     <Paper className="sheet">
       <div className="filter-row">
-        <TextField
-          id="category-filter"
-          label="Filter by category"
-          value={category}
-          onChange={handleCategoryChange}
-          type="search"
-        />
-        <TextField
-          id="name-search"
-          label="Search by name"
-          value={name}
-          onChange={handleNameChange}
-          type="search"
-        />
+        <div>
+          <SearchIcon />
+          <TextField
+            id="name-search"
+            label="Search by name"
+            value={name}
+            onChange={handleNameChange}
+            type="search"
+          />
+        </div>
+        <div>
+          <FilterListIcon />
+          <TextField
+            id="category-filter"
+            label="Filter by category"
+            value={category}
+            onChange={handleCategoryChange}
+            type="search"
+          />
+        </div>
       </div>
       <TableContainer className="sheet-container">
         <Table stickyHeader aria-label="sticky table">
@@ -77,6 +87,7 @@ export default function Sheet() {
                   key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
+                  id="table-head"
                 >
                   {column.label}
                 </TableCell>
@@ -92,7 +103,11 @@ export default function Sheet() {
                     {columns.map(column => {
                       const value = row[column.id]
                       return (
-                        <TableCell key={column.id} align={column.align}>
+                        <TableCell
+                          key={column.id}
+                          align={column.align}
+                          id="table-detail"
+                        >
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
@@ -103,7 +118,9 @@ export default function Sheet() {
                       <Link
                         to="../detail"
                         state={{
-                          url: `https://www.breakingbadapi.com/api/characters/${row[columns[0].id]}`,
+                          url: `https://www.breakingbadapi.com/api/characters/${
+                            row[columns[0].id]
+                          }`,
                         }}
                       >
                         View details
